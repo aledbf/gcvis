@@ -293,7 +293,7 @@ func main() {
 	go startSubprocess(pw)
 	go startParser(pr, gc, scvg)
 
-	l, err := net.Listen("tcp4", "127.0.0.1:0")
+	l, err := net.Listen("tcp4", "0.0.0.0:0")
 	if err != nil {
 		log.Fatal(err)
 	}
